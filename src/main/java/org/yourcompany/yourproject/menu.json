@@ -1,0 +1,14 @@
+{
+"menu": [
+    {
+      "id": 1,
+      "title": "Thể thao",
+      "parent_id": 0
+    },
+    {
+      "id": 2,
+      "title": "Xã hội",
+      "parent_id": 0
+    }
+  ]
+}

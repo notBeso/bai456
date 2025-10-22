@@ -1,0 +1,20 @@
+{
+"categories": [
+    {
+      "id": 1,
+      "name": "Comuter"
+    },
+    {
+      "id": 2,
+      "name": "Memory"
+    },
+    {
+      "id": 3,
+      "name": "Card"
+    },
+    {
+      "id": 4,
+      "name": "Acessory"
+    }
+  ]
+}
