@@ -32,7 +32,7 @@ public class bai4den16 {
  
         // sortByName(listProduct);
 
-        //sortByCategoryName(listProduct, listCategory);
+        // sortByCategoryName(listProduct, listCategory);
 
         // mapProductByCategory(listProduct, listCategory);
 
@@ -41,7 +41,7 @@ public class bai4den16 {
         // maxByPrice(listProduct);
 
     //TESTING
-        String[][] test = mapProductByCategory(listProduct, listCategory);
+        String[][] test = findProduct(listProduct, "HDD"); 
         for(int r = 0; r < test.length; r++){
             for(int c = 0; c < test[r].length; c++){
                 if( test[r][c] != null ){
