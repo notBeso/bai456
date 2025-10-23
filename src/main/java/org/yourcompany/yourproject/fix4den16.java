@@ -67,10 +67,10 @@ public class fix4den16 {
         // sortByCategoryName(listProduct, listCategory);
 
         //TESTING
-    //     ArrayList<product> test = sortByCategoryName(listProduct, listCategory);
-    //     for (product p : test){
-    //         product.printProduct(p);
-    //     }
+        ArrayList<product> test = sortByCategoryName(listProduct, listCategory);
+        for (product p : test){
+            product.printProduct(p);
+        }
     
         
 
@@ -153,13 +153,13 @@ public class fix4den16 {
     public static ArrayList<product> sortByName (ArrayList<product> listProduct) {
         ArrayList<product> result = listProduct;
         for(int i = 1 ; i < result.size() ; i++){
-            int p = i -1;
-            product hold = result.get(i);
-            while (p >= 0 && result.get(p).name.length() > hold.name.length()){
-                Collections.swap(result,p+1,p);
-                p --;
+            int pointer = i -1;
+            product holdProduct = result.get(i);
+            while (pointer >= 0 && result.get(pointer).name.length() > holdProduct.name.length()){
+                Collections.swap(result,pointer+1,pointer);
+                pointer --;
             }
-            Collections.replaceAll(result,result.get(p+1), hold);
+            result.set(pointer+1, holdProduct);
         }
         return result;
     }
@@ -168,13 +168,13 @@ public class fix4den16 {
     public static ArrayList<product> sortByCategoryName (ArrayList<product> listProduct, ArrayList<category> listCategory) {
         ArrayList<category> sort = listCategory;
         for(int i = 1 ; i < sort.size(); i++){
-            int p = i - 1;
-            category hold = sort.get(i);
-            while (p >= 0 && sort.get(p+1).name.compareToIgnoreCase(sort.get(p).name) >=0){
-                Collections.swap(sort,p+1,p);
-                p --;
+            int pointer = i - 1;
+            category holdProduct = sort.get(i);
+            while (pointer >= 0 && sort.get(pointer+1).name.compareToIgnoreCase(sort.get(pointer).name) >=0){
+                Collections.swap(sort,pointer+1,pointer);
+                pointer --;
             }
-            Collections.replaceAll(sort,sort.get(p+1), hold);
+            sort.set(pointer+1, holdProduct);
         }
         
 
@@ -189,13 +189,12 @@ public class fix4den16 {
         return result;
     }
 // BAI 14
-    public static HashMap <product,String> mapProductByCategory(ArrayList<product> listProduct, ArrayList<category> listCategory) {
-        // ArrayList<product> result = new ArrayList<product>();
-        HashMap <product,String> result = new HashMap<>();
+    public static ArrayList<product> mapProductByCategory(ArrayList<product> listProduct, ArrayList<category> listCategory) {
+        ArrayList<product> result = listProduct;
         for(product p : listProduct){
             for (category c : listCategory){
                 if(p.categoryID == c.categoryID){
-                    result.put(p, c.name);
+                    product.addCategory(p,c.name);
                 }
             }
         }
@@ -203,23 +202,23 @@ public class fix4den16 {
     }
 // BAI 15
     public static product minByPrice(ArrayList<product> listProduct) {
-        product min = listProduct.get(0);
+        product minPriceProduct = listProduct.get(0);
         for (product p : listProduct){
-            if(p.price < min.price){
-                min = p;
+            if(p.price < minPriceProduct.price){
+                minPriceProduct = p;
             }
         }
-        return min;
+        return minPriceProduct;
     }
 // BAI 16
     public static product maxByPrice(ArrayList<product> listProduct) {
-        product max = listProduct.get(0);
+        product maxPriceProduct = listProduct.get(0);
         for (product p : listProduct){
-            if(p.price > max.price){
-                max = p;
+            if(p.price > maxPriceProduct.price){
+                maxPriceProduct = p;
             }
         }
-        return max;
+        return maxPriceProduct;
         
     }
 

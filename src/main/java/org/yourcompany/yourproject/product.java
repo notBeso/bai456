@@ -14,8 +14,8 @@ public class product {
         this.categoryID = categoryId;
     }
 
-    public void addCategory (product p, String category){
-        this.category = category;
+    public static void addCategory (product p, String category){
+        p.category = category;
     }
 
     public static void printProduct(product p) {
