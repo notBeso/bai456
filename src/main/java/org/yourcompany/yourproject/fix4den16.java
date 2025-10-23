@@ -69,7 +69,6 @@ public class fix4den16 {
         // mapProductByCategory(listProduct, listCategory);
         HashMap<product,String> test = mapProductByCategory(listProduct, listCategory);
         for (Map.Entry<product,String> entry : test.entrySet()) {
-            
             System.out.print("CATEGORY:  " + entry.getValue() + "   " );
             product.printProduct(entry.getKey());
         }
