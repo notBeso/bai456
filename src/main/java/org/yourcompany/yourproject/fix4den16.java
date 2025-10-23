@@ -66,16 +66,24 @@ public class fix4den16 {
 
         // sortByCategoryName(listProduct, listCategory);
 
-        // mapProductByCategory(listProduct, listCategory);
-        HashMap<product,String> test = mapProductByCategory(listProduct, listCategory);
-        for (Map.Entry<product,String> entry : test.entrySet()) {
-            System.out.print("CATEGORY:  " + entry.getValue() + "   " );
-            product.printProduct(entry.getKey());
-        }
-        // minByPrice(listProduct);
-        product.printProduct(minByPrice(listProduct));
-        // maxByPrice(listProduct);
-        product.printProduct(maxByPrice(listProduct));
+        //TESTING
+    //     ArrayList<product> test = sortByCategoryName(listProduct, listCategory);
+    //     for (product p : test){
+    //         product.printProduct(p);
+    //     }
+    
+        
+
+    // mapProductByCategory(listProduct, listCategory);
+        // HashMap<product,String> test = mapProductByCategory(listProduct, listCategory);
+        // for (Map.Entry<product,String> entry : test.entrySet()) {
+        //     System.out.print("CATEGORY:  " + entry.getValue() + "   " );
+        //     product.printProduct(entry.getKey());
+        // }
+    // minByPrice(listProduct);
+        // product.printProduct(minByPrice(listProduct));
+    // maxByPrice(listProduct);
+        // product.printProduct(maxByPrice(listProduct));
 //TESTING
     //     ArrayList<product> test = sortByCategoryName(listProduct, listCategory);
     //     for (product p : test){
